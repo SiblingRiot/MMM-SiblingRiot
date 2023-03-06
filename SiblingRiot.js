@@ -159,14 +159,6 @@ Module.register("SiblingRIOT", {
         console.log("SiblingRIOT opening keyboard");
         this.sendNotification("KEYBOARD", {key: "SiblingRIOT", style: "default"});
     },
-   /* 
-	notificationReceived: function (noti, payload) {
-		if noti == "KEYBOARD" {
-			//do something with the payload
-			
-		}
-	},
-	*/
 	notificationReceived: function (noti, payload) {
 		if (noti == ("DOM_OBJECTS_CREATED") {
 			this.log ("MMM-Keyboard: Initializing keyboard");
@@ -198,15 +190,6 @@ Module.register("SiblingRIOT", {
 		var newData2 = JSON.stringify(theObject);
 		fs.writeFile("complimentsA.json", newData2);
 		console.log(message);
-		/*if (file.length == 0) {
-			fs.writeFileSync("complimentsA.json", JSON.stringify([data]));
-		} else {
-			complimentsA.anytime.push(message);
-			fs.writeFileSync("complimentsA.json", message);
-			
-			//complimentsA.anytime.push(message); 
-		}
-		*/
 		this.keyboard.clearInput();
 		document.getElementById("knInput").value="";
 		if (this.config.startUppercase) {this.shiftState = 1;}
